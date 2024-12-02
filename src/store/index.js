@@ -1,14 +1,10 @@
-import { createStore } from 'vuex'
+import {createStore} from 'vuex';
+import tasks from './modules/tasks';
 
-export default createStore({
-  state: {
-  },
-  getters: {
-  },
-  mutations: {
-  },
-  actions: {
-  },
+const store = createStore({
   modules: {
+    tasks
   }
-})
+});
+
+export default store;

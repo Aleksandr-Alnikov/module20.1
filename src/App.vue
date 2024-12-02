@@ -1,30 +1,35 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <div id="app">
+    <nav>
+      <router-link to="/">Мои задачи</router-link>
+      <router-link to="/create">Создать задачу</router-link>
+      <router-link to="/settings">Настройки</router-link>
+    </nav>
+    <router-view></router-view>
+  </div>
 </template>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+  padding: 20px 100px;
 }
 
 nav {
-  padding: 30px;
+  margin-bottom: 20px;
+  margin: 0 auto;
+  display: flex  ;
+  justify-content: center;
+  gap: 30px;
+  padding: 15px;
+  border-bottom: 1px solid #c4c4c4;
+  color: #000;
 }
-
 nav a {
-  font-weight: bold;
-  color: #2c3e50;
+  margin-right: 10px;
+  text-decoration: none;
+  color: #000;
 }
-
-nav a.router-link-exact-active {
-  color: #42b983;
+nav a.router-link-active {
+  font-weight: bold;
 }
 </style>
